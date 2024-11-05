@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import './App.css'
 import HomePage from './pages/HomePage';
-
+import SingleArticlePage from "./pages/SIngleArticlePage";
 function App() {
   
 
@@ -10,6 +10,7 @@ function App() {
     <div className='page-content'>
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/singlearticle" element={<SingleArticlePage />} />
     </Routes>
     </div>
   </>
