@@ -18,7 +18,7 @@ export default function SingleArticleGenerator(){
     })
     .catch(() => setIsError(true))
     .finally(() => setIsLoading(false))
-   }, [])
+   }, [article_id])
 
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Something went wrong, please refresh the page</div>;
