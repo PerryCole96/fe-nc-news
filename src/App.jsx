@@ -10,7 +10,7 @@ function App() {
     <div className='page-content'>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/singlearticle" element={<SingleArticlePage />} />
+      <Route path="/articles/:article_id" element={<SingleArticlePage />} />
     </Routes>
     </div>
   </>

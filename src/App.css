@@ -1,62 +1,152 @@
-
 .page-content {
-    min-height: 500px;
-    background-color: palevioletred;
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
+  min-height: 500px;
+  background-color: palevioletred;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
 }
 
-.article-title{
-    font-size: 1.7rem;
-    font-weight: bold;
+.whole-list {
+  padding-top: 1.2rem;
 }
 
-.username{
-    font-size: 1.3rem;
-    float: inline-end;
-    font-weight: bold;
+.article-list-item {
+  border: solid 5px black;
+  border-radius: 2%;
+  padding: 0.5rem;
+  background-color: rgb(137, 102, 168);
+  position: relative;
+  display: flex;
 }
 
-.topic{
+.article-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.article-topic {
   font-size: 1.2rem;
-  
+  font-weight: bold;
 }
 
-.article-list-item{
-    border: solid, 5px black;
-    border-radius: 2%;
-    padding: 0.5rem;
-    background-color: rgb(137, 102, 168);
+.auth-username {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.article-image{
-    border-radius: 2%;
-    width: 20%;
-    height: auto;
+.article-interaction-total {
+  font-size: 1.1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
 }
+
+.article-image {
+  border-radius: 2%;
+  width: 25%;
+  height: auto;
+}
+
 .header {
-    
-    column-count: 2;
-  }
-  .user-img{
-    display: block;
-    margin-left: auto;
-   float: inline-end;
-   width: 12%;
-   height: auto;
-   padding: 0.5rem;
-   padding-bottom: 2rem;
-   border-radius: 2%;
-  }
-  .whole-list{
-    padding-top: 1.2rem;
-    
-  }
-  .own-username{
-    float: right;
-    font-size: 1.4rem;
-  }
-  .logo{
-    font-size: 2.5rem;
-    font-weight: bolder;
-  }
+  column-count: 2;
+}
+
+.user-img {
+  display: block;
+  margin-left: auto;
+  float: right;
+  width: 12%;
+  height: auto;
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+  border-radius: 2%;
+}
+
+.own-username {
+  float: right;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.single-article {
+  background-color: rgb(231, 195, 165);
+  padding: 1rem;
+  display: flex;
+  column-count: 2;
+}
+
+.article-left-column {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.single-left-column {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.single-topic {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.single-article-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.single-article-image {
+  border-radius: 2%;
+  width: 25%;
+  height: auto;
+}
+
+.single-interaction-total {
+  font-size: 1.1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+}
+
+.single-right-column {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  float: right;
+}
+
+.article-right-column {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  float: right;
+}
+
+.article-votes {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.single-votes {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.single-auth-username {
+  float: right;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.single-article-body {
+  margin-top: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+}
