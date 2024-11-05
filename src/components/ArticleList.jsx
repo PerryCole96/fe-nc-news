@@ -20,7 +20,7 @@ const [isError, setIsError] = useState(false);
     .finally(() => setIsLoading(false))
  }, [])
 
- if (isLoading) return <div>isLoading...</div>;
+ if (isLoading) return <div>Loading...</div>;
  if (isError) return <div>Something went wrong, please refresh the page</div>;
     
  return(

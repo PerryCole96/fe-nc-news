@@ -11,3 +11,9 @@ return api
 .get("/articles")
 .then((res) => res.data)
 }
+
+export function getArticleById(article_id){
+    return api
+    .get(`/articles/${article_id}`)
+    .then((res) => res.data)
+}
