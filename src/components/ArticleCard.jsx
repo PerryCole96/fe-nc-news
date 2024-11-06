@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function ArticleCard({article}) {
-  if(!article){
-    return <div>No Article Data!</div>
-  }
   const {article_id, title, topic, comment_count, author, article_img_url, votes} = article;
 
   return (

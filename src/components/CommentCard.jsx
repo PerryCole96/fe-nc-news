@@ -1,9 +1,7 @@
 import dateConverter from "../utils/dateConverter";
 
 export default function CommentCard({ comment }) {
-    if (!comment) {
-        return <div>Ain't no comments here my dude, now go on, get!!</div>
-    }
+
     const { comment_id, votes, created_at, author, body } = comment;
     
     return (
@@ -14,8 +12,8 @@ export default function CommentCard({ comment }) {
         <p className="comment-body">{body}</p>
             </div>
             <div className="comment-right-column">
-                <p className="comment-time">{dateConverter(created_at)}</p> {}
-                <p className="comment-votes">{votes}</p>
+                <p className="comment-time">Posted: {dateConverter(created_at)}</p> {}
+                <p className="comment-votes">Comment Votes: {votes}</p>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 .page-content {
   min-height: 500px;
-  background-color: palevioletred;
+  background-image: linear-gradient(palevioletred, rgba(219, 126, 12, 0.945));
   padding: 0.5rem 1rem;
   margin: 1rem 0;
 }
@@ -11,11 +11,12 @@
 
 .article-list-item {
   border: solid 5px black;
-  border-radius: 2%;
+  border-radius: 1.5%;
   padding: 0.5rem;
   background-color: rgb(137, 102, 168);
   position: relative;
   display: flex;
+  margin:1rem;
 }
 
 .article-title {
@@ -36,6 +37,18 @@
 .comment-username {
   font-size: 1.3rem;
   font-weight: bold;
+  padding: 0.5rem;
+
+}
+
+.comment-list-item{
+  padding: 0.5rem;
+  
+}
+
+.comment-section{
+  background-color: rgba(231, 195, 165, 0.719);
+  border-radius: 1.5%;
 }
 
 .article-interaction-total {
@@ -47,28 +60,43 @@
 .article-image {
   border-radius: 2%;
   width: 25%;
+  max-width: 450px;
   height: auto;
 }
 
 .header {
   column-count: 2;
+  margin: 1rem 0;
+  margin-right: 22px;
 }
-
+.comment-heading{
+  font-size: 1.5rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1.5rem;
+}
 .user-img {
   display: block;
   margin-left: auto;
   float: right;
   width: 12%;
+  max-height: 150px;
   height: auto;
   padding: 0.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
   border-radius: 2%;
 }
 
 .own-username {
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
   float: right;
+  width: 12%;
+  height: auto;
+  padding: 0.5rem;
+  padding-bottom: 6rem;
+  border-radius: 2%;
   font-size: 1.4rem;
-  margin-bottom: 0.5rem;
 }
 
 .logo {
@@ -81,6 +109,7 @@
   padding: 1rem;
   display: flex;
   column-count: 2;
+  border-radius: 1.5%;
 }
 
 .article-left-column {
