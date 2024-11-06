@@ -23,3 +23,9 @@ export function getCommentsByArticleId(article_id){
     .get(`/articles/${article_id}/comments`)
     .then((res) => res.data)
 }
+
+export function patchLike({article_id, inc_votes}){
+    return api
+    .patch(`/articles/${article_id}`,{inc_votes})
+    .then((res) => res.data)
+}
