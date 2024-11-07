@@ -11,7 +11,7 @@ export default function SingleArticlePage(){
     return (
         <div>
             <SingleArticleGenerator article_id={article_id}/>
-            <CommentList article_id={article_id}/>
+            <CommentList key={Comment.id} article_id={article_id}/>
             
         </div>
     )
