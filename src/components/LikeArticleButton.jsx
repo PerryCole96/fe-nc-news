@@ -10,13 +10,16 @@ export default function LikeArticleButton({article_id, votes, updateVotes}){
     const [disabledLike, setDisabledLike] = useState(false)
     const [disabledDis, setDisabledDis] = useState(false)
    
-    if(!isLoggedIn) return
+    if(!isLoggedIn){
+        return
+    }
     
     function handleChangeVotes(increment, buttonType){
         if(!isLoggedIn) return
         const newVotes = votes + increment
 
         if (newVotes < 0 ) return
+
         if (buttonType === "like") {
             setIsLoadingLike(true); setDisabledLike(true);
             setDisabledDis(false);
@@ -24,7 +27,7 @@ export default function LikeArticleButton({article_id, votes, updateVotes}){
         setIsLoadingDis(true); setDisabledLike(false);
             setDisabledDis(true);
         }
-         
+
         updateVotes(newVotes)
        
         patchLike({article_id, inc_votes: increment})
@@ -40,8 +43,9 @@ export default function LikeArticleButton({article_id, votes, updateVotes}){
             }
         });
     }
-
-    if (isError) return <p>Could not alter votes.</p>
+    
+    if (isLoadingDis || isLoadingLike) {return <p>Liking now...</p>}
+    if (isError) {return <p>Could not alter votes.</p>}
 
     return(
     <div className="opinion-buttons">
@@ -50,17 +54,14 @@ export default function LikeArticleButton({article_id, votes, updateVotes}){
          onClick={(e) => {
             e.preventDefault()
             handleChangeVotes(1, "like")
-         }}
-        >Like</button>
+         }}>Like</button>
 
         <button className="dislike-button" 
         disabled={disabledDis || isLoadingDis || votes <= 0}
          onClick={(e) => {
             e.preventDefault()
             handleChangeVotes(-1, "dislike")
-
-         }}
-        >Dislike</button>
+        }}>Dislike</button>
     </div>
     )
 };

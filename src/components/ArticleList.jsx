@@ -20,8 +20,8 @@ const [isError, setIsError] = useState(false);
     .finally(() => setIsLoading(false))
  }, [])
 
- if (isLoading) return <div>Loading...</div>;
- if (isError) return <div>Something went wrong, please refresh the page</div>
+ if (isLoading) return <h3>Loading Articles...</h3>;
+ if (isError) return <h3>Something went wrong, please refresh the page</h3>
     
  return(
     <div className="whole-list" >

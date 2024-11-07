@@ -2,7 +2,7 @@ import dateConverter from "../utils/dateConverter";
 
 export default function CommentCard({ comment }) {
 
-    const { comment_id, votes, created_at, author, body } = comment;
+    const { votes, created_at, author, body } = comment;
     
     return (
         <div className="comment-list-item">
