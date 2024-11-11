@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CommentCard from "./CommentCard";
 import { getCommentsByArticleId } from "../utils/api";
 import CommentAdder from "./CommentAdder";
+import CommentDeleter from "./CommentDeleter";
 
 
 export default function CommentList({ article_id }) {
@@ -15,6 +16,7 @@ export default function CommentList({ article_id }) {
 
         getCommentsByArticleId(article_id)
             .then((data) => {
+                // console.log(data)
                 setComments(data.comments)
             })
             .catch(() => setIsError(true))
@@ -32,6 +34,15 @@ export default function CommentList({ article_id }) {
           .finally(() => setIsLoading(false));
   }
 
+  function handleDeletedComment(comment_id){
+        
+        setComments((prevComments) => 
+            prevComments.filter((comment) => comment.comment_id !== comment_id)
+        )
+    }
+    
+  
+
   if (isLoading) return <h3>Loading Comments...</h3>
     if (isError) return <h3>Something went wrong, please refresh the page</h3>
 
@@ -40,8 +51,12 @@ export default function CommentList({ article_id }) {
           <h3 className="comment-heading">Comments</h3>
           <CommentAdder article_id={article_id} handleNewCommentAdded={handleNewCommentAdded} />
             {comments.map((comment) => {
-                return <CommentCard key={comment.comment_id} comment={comment} />
-            })}
+            return (
+            <div key={comment.comment_id}>
+                <CommentCard comment={comment} />
+          <CommentDeleter comment={comment}  comment_id={comment.comment_id} handleDeletedComment={handleDeletedComment}/>
+        </div>    
+    )})}
         </div>
     )
 }

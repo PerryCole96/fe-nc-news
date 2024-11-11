@@ -5,6 +5,7 @@ import SingleArticlePage from "./pages/SingleArticlePage";
 import Header from "./components/Header";
 import { useState } from "react";
 import UserContext from "./context/UserContext";
+import TopicList from "./components/TopicList";
 
 export default function App() {
 
@@ -27,6 +28,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/articles/:article_id" element={<SingleArticlePage />} />
+      <Route path="/topics/:topic" element={<TopicList />}/>
     </Routes>
     </div>
     </UserContext.Provider>

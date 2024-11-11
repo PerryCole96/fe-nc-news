@@ -10,7 +10,7 @@ export default function ArticleCard({article}) {
       <img className="article-image" src={article_img_url} alt={`an image related to the article titled ${title}`} />
       <h3 className="article-title">{title}</h3>
       </Link>
-      <p className="article-topic">{topic}</p>
+      <Link to={`/topics/${topic}`} className="article-topic">{topic}</Link>
       </div>
       <div className="article-right-column">
       <p className="auth-username">{author}</p>

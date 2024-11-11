@@ -1,5 +1,4 @@
 import dateConverter from "../utils/dateConverter";
-
 export default function CommentCard({ comment }) {
 
     const { votes, created_at, author, body } = comment;
