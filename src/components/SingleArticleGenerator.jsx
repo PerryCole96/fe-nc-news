@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getArticleById } from "../utils/api";
 import { useParams } from "react-router-dom";
 import LikeArticleButton from "./LikeArticleButton";
+import { Link } from "react-router-dom";
 
 
 export default function SingleArticleGenerator(){
@@ -46,7 +47,7 @@ export default function SingleArticleGenerator(){
   <div className="single-left-column">
     <img className="single-article-image" src={article_img_url} alt={`Image related to the article titled ${title}`} />
     <h3 className="single-article-title">{title}</h3>
-    <div className="single-topic">{topic}</div>
+    <Link to={`/topics/${topic}`} className="article-topic">{topic}</Link>
     <div className="single-article-body">{body}</div>
     
   </div>
