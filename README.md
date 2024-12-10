@@ -1,61 +1,62 @@
-# NC News Frontend
+# NC News Full-Stack Application
+
+[Live Demo - Backend API](https://perry-be-nc-news.onrender.com/api)
 
 ## **Project Overview**
 
-NC News Frontend is a React.js-based web application that interacts with the **NC News API** backend to display articles, comments, and user data. The frontend is designed to provide a dynamic and responsive user interface, utilizing **React Router** for navigation and **React Context** for managingstate. This project was developed as part of the **Northcoders** bootcamp to demonstrate proficiency in frontend development, including UI design, API integration, and user interaction handling.
+NC News is a full-stack web application featuring a **React.js** frontend and an **Express.js** backend powered by **PostgreSQL**. This project was developed as part of the **Northcoders** bootcamp to showcase skills in backend development, API design, and frontend development. The application allows users to view and interact with articles, comments, and topics, with features for voting and filtering.
 
 ---
 
 ## **Key Features**
 
-### **Article Display**
-- Users can view a list of articles, including information such as the title, author, topic, and vote count.
-- Articles can be sorted by various criteria including date, vote count, and comment count.
-- Users can view detailed information for individual articles, including comments and vote interactions.
+### **Backend Features (API)**
+- **Article Management**: Fetch, create, and filter articles by ID, author, or topic.
+- **Commenting System**: Create, delete, and vote on comments associated with articles.
+- **User Data**: Retrieve user profiles, including avatars and usernames.
+- **Voting System**: Vote on articles and comments to influence their ranking.
+- **Database Seeding**: Pre-populated with test data for development and testing.
 
-### **User Authentication**
-- The app uses React's Context API to manage user authentication state, allowing users to log in and see their profile with an avatar and username.
-- Conditional rendering is implemented to display personalized content for logged-in users.
-
-### **Voting System**
-- Users can vote on articles, either upvoting or downvoting content, which updates the article's vote count in real-time.
-
-### **Topic Filtering**
-- Users can filter articles by topic, enabling them to focus on specific content areas such as **Coding**, **Cooking**, or **Football**.
+### **Frontend Features**
+- **Article Display**: View a list of articles with sorting options like date, vote count, and comment count.
+- **Article Details**: View individual articles along with comments and voting options.
+- **User Authentication**: Users can log in to see their profile and interact with content.
+- **Voting**: Vote on articles and comments to update their vote counts in real-time.
+- **Topic Filtering**: Filter articles by various topics like **Coding**, **Cooking**, and **Football**.
 
 ---
 
 ## **Technologies Used**
 
+### **Backend**
+- **Node.js**: JavaScript runtime for building the API.
+- **Express**: Web framework used for building RESTful endpoints.
+- **PostgreSQL**: Relational database for storing articles, comments, and user data.
+- **Knex.js**: SQL query builder for interacting with the PostgreSQL database.
+- **Supabase**: Cloud platform for hosting the database and backend.
+- **Jest**: Testing framework for writing and running unit tests.
+- **Model-View-Controller (MVC)**: Architecture used for API design.
+
 ### **Frontend**
 - **React.js**: JavaScript library for building dynamic user interfaces with a component-based architecture.
-- **React Router**: Library for handling client-side routing and page navigation within the application.
-- **React Context API**: Used for managing global state, such as user authentication data, and passing it throughout the app.
-- **CSS**: Styling is handled through custom CSS classes for a responsive and visually appealing layout.
-- **Axios**: HTTP client for interacting with the backend API to fetch and manage data.
+- **React Router**: Library for handling client-side routing and page navigation.
+- **React Context API**: Used for managing global state, such as user authentication data.
+- **CSS**: Custom styling to create a responsive, user-friendly design.
+- **Axios**: HTTP client for making API requests and fetching data.
 
 ---
 
 ## **Development Experience**
 
-This project provided valuable experience in the following areas:
+This project provided hands-on experience in the following areas:
 
-- **Frontend development with React**: Building a dynamic, component-based user interface that interacts with an API.
-- **API integration**: Fetching data from the **NC News API** backend, including handling asynchronous operations with `axios` and managing the state with `useState` and `useEffect`.
-- **State management with React Context**: Using the Context API to manage global state across the application, such as user authentication and article data.
-- **Routing and navigation**: Implementing React Router for smooth transitions between pages (e.g., home, topics, single article view).
-- **Responsive design**: Ensuring the application is responsive and visually appealing across different screen sizes.
-
----
-
-## **Frontend Pages**
-
-The frontend is structured into several pages, each of which provides a different view for the user:
-
-- **Home**: Displays a list of all articles with sorting options.
-- **Topic List**: Displays articles filtered by specific topics (e.g., Coding, Cooking, Football).
-- **Single Article**: Shows detailed information for an individual article, including the title, author, comments, and vote buttons.
-- **User Profile**: Displays the current user's profile, including their avatar and username.
+- **Backend API Development**: Creating RESTful endpoints with Express and interacting with the database using Knex.js.
+- **Database Design and Management**: Setting up and managing a PostgreSQL database, including migrations and seed data.
+- **Frontend Development**: Building a React app with reusable components and integrating it with the backend API.
+- **State Management**: Using React Context to manage global state, such as user authentication and article data.
+- **Routing**: Implementing dynamic routing with React Router for smooth navigation.
+- **Testing**: Following TDD principles for backend testing using Jest and ensuring frontend reliability with tests.
+- **Deployment**: Deploying the backend API to Render and the frontend to a cloud platform.
 
 ---
 
