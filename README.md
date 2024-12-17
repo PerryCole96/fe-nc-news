@@ -1,4 +1,4 @@
-# NC News Full-Stack Application
+# NC News Full-Stack Application - Frontend Repo
 
 [Link - Backend Repo](https://github.com/PerryCole96/be-nc-news/blob/main/README.md)
 
